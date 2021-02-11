@@ -1,0 +1,30 @@
+.DS_Store
+node_modules
+/1-jogomonster/node_modules
+/2-Diretivas/node_modules
+/3-Estilizacao/node_modules
+/4-Animation/node_modules
+/5-Eventos/node_modules
+/6-Components/node_modules
+/7-Vuex/node_modules
+/8-Router/node_modules
+
+# local env files
+.env.local
+.env.*.local
+.env
+.env.*
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
