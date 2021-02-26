@@ -2,11 +2,19 @@
     <div class="container">
         <h1>Componente Usuário</h1>
         <p>Esse é um componente muito legal</p>
+        <p>Nome é <strong> {{ nome }} </strong></p>
+        <p>Idade é <strong> {{ idade }} </strong></p>
         <button @click="alterarNome">Alterar Nome</button>
         <hr>
         <div class="componentes">
-            <UsuarioInfo :nome="nome" />
-            <UsuarioEditar />
+            <UsuarioInfo 
+                :nome="nome"
+                :idade="idade"
+                @nomeMudou="nome = $event"
+                :reiniciarFn="reiniciarNome" />
+            <UsuarioEditar 
+                :idade="idade"
+                @mudarIdade="idade = $event" />
         </div>
     </div>
 </template>
@@ -17,14 +25,18 @@ import UsuarioEditar from './UsuarioEditar'
 export default {
     name: 'Usuario',
     components: {UsuarioInfo, UsuarioEditar},
-    data: () => {
+    data() {
         return {
-            nome: 'Eduardo'
+            nome: 'Eduardo',
+            idade: 29
         }
     },
     methods: {
         alterarNome() {
             this.nome = 'Tété'
+        },
+        reiniciarNome() {
+            this.nome = 'Eduardo'
         }
     }
 }
