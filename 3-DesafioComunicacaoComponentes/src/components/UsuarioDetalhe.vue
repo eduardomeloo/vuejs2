@@ -20,6 +20,9 @@ export default {
     created() {
         barramento.$on('userSelected', user => {
             this.usuario = user
+        }),
+        barramento.selectedUserEvent(user => {
+            this.usuario = user
         })
     }
 }

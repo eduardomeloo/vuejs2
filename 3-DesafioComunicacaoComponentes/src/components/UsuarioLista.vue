@@ -8,7 +8,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="usuario in usuarios" :key="usuario.id" @click="selectUser(usuario)">
+                <tr v-for="usuario in usuarios" :key="usuario.id" @click="selectUserMethod(usuario)">
                     <td>{{ usuario.id }}</td>
                     <td>{{ usuario.nome }}</td>
                 </tr>
@@ -29,6 +29,9 @@ export default {
     methods: {
         selectUser(user) {
             barramento.$emit('userSelected', user)
+        },
+        selectUserMethod(user) {
+            barramento.selectedUser(user)
         }
     }
 }
