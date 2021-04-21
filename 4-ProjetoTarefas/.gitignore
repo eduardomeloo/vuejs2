@@ -1,16 +1,10 @@
 .DS_Store
 node_modules
-/1-jogomonster/node_modules
-/2-ComunicacaoEntreComponentes/node_modules
-/3-DesafioComunicacaoComponentes/node_modules
-/4-ProjetoTarefas/node_modules
-
+/dist
 
 # local env files
 .env.local
 .env.*.local
-.env
-.env.*
 
 # Log files
 npm-debug.log*
